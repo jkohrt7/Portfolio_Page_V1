@@ -1,8 +1,20 @@
-/* Universal Elements */
+/* Universal Elements and Colors*/
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
 
+}
+
+
+:root {
+    --color_navy: #05386b;
+    --color_lighter_navy: #3D59AB;
+    --color_cyan: #3D59AB;
+}
+
+
+body {
+    background-color: lightgray;
 }
 
 /* Header Elements */
@@ -10,7 +22,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(0, 0, 41);
+    background-color: var(--color_navy);
     color: white;
     padding: 3vh;
 }
@@ -20,29 +32,119 @@
     display: flex;
     justify-content: space-evenly;
     width: 50vh;
-    border: black solid 4px;
-}
-
-.header li {
-
 }
 
 .header a {
     display: inline-block;
     color: inherit;
     text-decoration: none;
-    font-size: 130%;    
-    position: relative;    
-    z-index: 1;     
-    padding: 1.5em;     
-    margin: -1.5em;
-
+    font-size: 130%;
+    position: relative;
+    z-index: 1;
+    padding: 4vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    margin: -4vh;
 }
 
 .header a:hover {
-    background-color: navy;
+    background-color: var(--color_lighter_navy);
 }
 
-/** Main Elements **/
-/* Article */
-/* Aside */
+/** Main Elements 
+    Specificty is Main>Article>section/aside
+**/
+
+/* Container for aside and articles */
+.main-article {
+    display: flex;
+    flex-flow: row;
+    height: auto;
+    width: 90%;
+
+    /* border: solid purple 4px; */
+    padding: 20px;
+}
+
+/* Aside: flex item */
+.main-article aside {
+    border-right: solid var(--color_navy) 4px;
+    text-align: right;
+    padding-right: 10px;
+    flex: 0 0 16%;
+}
+
+aside h1 {
+    font-size: 200%;
+    color: var(--color_navy);
+}
+
+.main-article p {
+    padding-left: 20px;
+}
+
+/* Section: flex item*/
+.work-container section {
+    border: solid var(--color_cyan) 4px;
+}
+
+/* Nested container for work items*/
+
+.work-container {
+    display: flex;
+    width: 100%;
+    flex-flow: row wrap;
+    /* border: solid yellowgreen 4px; */
+}
+
+/* Items in work-container */
+#MERN-work {
+    flex: 0 1 30%;
+    background-image: url(../images/mern.jpg);
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 280px;
+    max-width: 1000px;
+    margin: 5px;
+}
+
+#Unity-work {
+    flex: 0 1 11%; /*grow | shrink | basis */
+    background-image: url('../images/galaga.png');
+    background-size: cover;
+    background-repeat:no-repeat;
+    height: 280px;
+    overflow:hidden;
+    margin: 5px;
+} 
+
+#Solar-work {
+    flex: 1 1 32%; /*grow | shrink | basis */
+    min-width: 40px;
+    background-image: url('../images/system.jpg');
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 280px;
+    width: 55%;
+    overflow:hidden;
+    margin: 5px;
+}
+
+
+/* Flex container for titles on top of content*/
+.work-container span {
+    width: 200px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.work-container section h2 {
+    background-color: var(--color_cyan);
+    color:rgb(11, 22, 53);
+    
+}
+
+.work-container section p {
+    background-color: var(--color_cyan);
+    color:rgb(11, 22, 53);
+}

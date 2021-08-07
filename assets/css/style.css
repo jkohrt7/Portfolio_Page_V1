@@ -9,7 +9,7 @@
 :root {
     --color_navy: #05386b;
     --color_lighter_navy: #3D59AB;
-    --color_cyan: #3D59AB;
+    --color_cyan: #8da5ec;
 }
 
 
@@ -83,56 +83,51 @@ aside h1 {
     padding-left: 20px;
 }
 
-/* Section: flex item*/
-.work-container section {
-    border: solid var(--color_cyan) 4px;
-}
-
 /* Nested container for work items*/
-
 .work-container {
     display: flex;
-    width: 100%;
     flex-flow: row wrap;
-    /* border: solid yellowgreen 4px; */
 }
 
 /* Items in work-container */
+.work-container section {
+    border: solid var(--color_cyan) 6px;
+}
+
 #MERN-work {
-    flex: 0 1 30%;
     background-image: url(../images/mern.jpg);
     background-size: cover;
     background-repeat:no-repeat;
+
+    min-width: 550px;
     height: 280px;
-    max-width: 1000px;
     margin: 5px;
 }
 
 #Unity-work {
-    flex: 0 1 11%; /*grow | shrink | basis */
     background-image: url('../images/galaga.png');
     background-size: cover;
     background-repeat:no-repeat;
+
+    min-width: 200px;
     height: 280px;
-    overflow:hidden;
     margin: 5px;
 } 
 
 #Solar-work {
-    flex: 1 1 32%; /*grow | shrink | basis */
-    min-width: 40px;
     background-image: url('../images/system.jpg');
+    background-size: cover;
     background-repeat:no-repeat;
-    background-size:cover;
+
+    min-width: 500px;
     height: 280px;
-    width: 55%;
-    overflow:hidden;
     margin: 5px;
 }
 
 
 /* Flex container for titles on top of content*/
 .work-container span {
+    margin-left: -2px;
     width: 200px;
     display: inline-block;
     margin-top: 20px;

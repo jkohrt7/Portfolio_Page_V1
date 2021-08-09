@@ -9,12 +9,12 @@
 :root {
     --color_navy: #05386b;
     --color_lighter_navy: #3D59AB;
-    --color_cyan: #8da5ec;
+    --color_cyan: #9397c0;
 }
 
 
 body {
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 /* Header Elements */
@@ -98,7 +98,7 @@ aside h1 {
     background-image: url(../images/mern.jpg);
     background-size: cover;
     background-repeat:no-repeat;
-
+    flex-grow: 1;
     min-width: 550px;
     height: 280px;
     margin: 5px;
@@ -108,7 +108,7 @@ aside h1 {
     background-image: url('../images/galaga.png');
     background-size: cover;
     background-repeat:no-repeat;
-
+    flex-grow: 1;
     min-width: 200px;
     height: 280px;
     margin: 5px;
@@ -118,7 +118,7 @@ aside h1 {
     background-image: url('../images/system.jpg');
     background-size: cover;
     background-repeat:no-repeat;
-
+    flex-grow: 1;
     min-width: 500px;
     height: 280px;
     margin: 5px;
@@ -142,4 +142,5 @@ aside h1 {
 .work-container section p {
     background-color: var(--color_cyan);
     color:rgb(11, 22, 53);
+    padding:4px;
 }

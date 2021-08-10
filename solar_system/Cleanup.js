@@ -9,7 +9,7 @@ let cloudGroup;
 
 //For focus and offset of camera
 let currentObject;
-let camOffset = 15;
+let camOffset = 5;
 
 const direction = new THREE.Vector3();
 
@@ -33,7 +33,7 @@ function main() {
     createRenderer();
 
     //Start the camera at the sun
-    currentObject = spheresToRotate[1];
+    currentObject = spheresToRotate[2];
 
     //Continuously render the scene
     renderer.setAnimationLoop( () => {     
@@ -137,7 +137,8 @@ function createMeshes() {
     
     //Node for moon so it is distiguished from earth
     const moonOrbit = new THREE.Object3D();
-    moonOrbit.position.x = 2.5;
+    moonOrbit.position.x = 3.5;
+    moonOrbit.position.y = 1.5;
     earthOrbit.add(moonOrbit);
     
     //The Moon
@@ -220,7 +221,7 @@ function makeAxisGrid(node, label, units) {
 
 document.getElementById("sunButton").onclick = function() {
     currentObject = spheresToRotate[1];
-    camOffset = 15;
+    camOffset = 50;
 }
 
 document.getElementById("earthButton").onclick = function() {

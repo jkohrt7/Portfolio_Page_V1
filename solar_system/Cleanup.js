@@ -63,10 +63,10 @@ function createCamera() {
 function createLights() {
     //Point lamp for center of the sun
     const color = 0xFFFFFF;
-    const intensity = 1.8;
+    const intensity = 1;
     const pointLight = new THREE.PointLight(color, intensity);
 
-    const ambientLight = new THREE.AmbientLight ( 0xffffff, 0.3);
+    const ambientLight = new THREE.AmbientLight ( 0xffffff, 0.55);
     scene.add( ambientLight, pointLight );
 }
 
@@ -112,7 +112,7 @@ function createMeshes() {
     
     //Node for earth so it is disguished from satellites
     const earthOrbit = new THREE.Object3D();
-    earthOrbit.position.x = 15;
+    earthOrbit.position.x = 35;
     solarSystem.add(earthOrbit);
     spheresToRotate.push(earthOrbit);
 
@@ -120,7 +120,7 @@ function createMeshes() {
     const earthTex = textureLoader.load( "images/Earth.jpg")
     const earthBump = textureLoader.load("images/earthnormal.jpg");
     const earthSpec = textureLoader.load("images/water.png");
-    const earthMaterial = new THREE.MeshPhongMaterial({map: earthTex, specularMap: earthSpec, specular: new THREE.Color('grey'), flatShading: false});
+    const earthMaterial = new THREE.MeshPhongMaterial({map: earthTex, specularMap: earthSpec, specular: new THREE.Color('grey'), shininess: 10, flatShading: false});
     const earthMesh = new THREE.Mesh(sphereGeometry, earthMaterial);
     earthOrbit.add(earthMesh);
     spheresToRotate.push(earthMesh);

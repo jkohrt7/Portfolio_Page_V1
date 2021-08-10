@@ -117,9 +117,9 @@ function createMeshes() {
     spheresToRotate.push(earthOrbit);
 
     //The Earth
-    const earthTex = textureLoader.load( "images/earth.jpg")
+    const earthTex = textureLoader.load( "images/Earth.jpg")
     const earthBump = textureLoader.load("images/earthnormal.jpg");
-    const earthSpec = textureLoader.load("images/water.jpg");
+    const earthSpec = textureLoader.load("images/water.png");
     const earthMaterial = new THREE.MeshPhongMaterial({map: earthTex, specularMap: earthSpec, specular: new THREE.Color('grey'), flatShading: false});
     const earthMesh = new THREE.Mesh(sphereGeometry, earthMaterial);
     earthOrbit.add(earthMesh);

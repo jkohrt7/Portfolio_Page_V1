@@ -4,13 +4,11 @@
     margin: 0;
 }
 
-
 :root {
-    --color_navy: #05386b;
-    --color_lighter_navy: #3D59AB;
-    --color_cyan: #9397c0;
+    --color_darkGrey: #31343D;
+    --color_aquamarine: #92CBCE;
+    --color_slategrey: #445876;
 }
-
 
 body {
     background-color: whitesmoke;
@@ -18,47 +16,61 @@ body {
 
 /* Header Elements */
 .header {
-    background-color: var(--color_navy);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color_darkGrey);
     color: white;
-    padding: 3vh;
-    display: block;
-}
-
-.header nav {
-    display:inline;
-    float:right;
+    padding: 0;
+    margin: 0 0 0 -20px;
 }
 
 .header h1 {
-    display: inline;
+    font-size: 40px;
+    padding: 4px 8px 4px 50px;
+    margin: 16px;
+    background-color: var(--color_aquamarine);
+    color:var(--color_darkGrey);
 }
 
 .header ul {
     list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50vh;
 }
 
 .header li {
-    display: inline;
-    padding-right: 30px;
-    padding-right: 15px;
+    display: flex;
+    margin: 0px;
+    color: var(--color_aquamarine);
+    padding: 2vh 1vh 2vh 1vh;
 }
 
+.header li:hover{
+    background-color: var(--color_aquamarine);
+    color: var(--color_darkGrey);
+}
+
+.header li:hover a {
+    border-bottom: var(--color_darkGrey) solid 3px;
+}
 
 .header a {
     display: inline-block;
     color: inherit;
     text-decoration: none;
+    text-align: center;
     font-size: 130%;
+    font-weight:600;
     position: relative;
-    z-index: 1;
-    padding: 4vh;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    margin: -4vh;
+    padding: 1.5vh;
+    padding-bottom: 1vh;
+    border-bottom: var(--color_aquamarine) solid 3px;
 }
 
 .header a:hover {
-    background-color: var(--color_lighter_navy);
+    color:var(--color_darkGrey);
 }
 
 /** Main Elements 
@@ -78,7 +90,7 @@ body {
 
 /* Aside: flex item */
 .main-article aside {
-    border-right: solid var(--color_navy) 4px;
+    border-right: solid var(--color_darkGrey) 4px;
     text-align: right;
     padding-right: 10px;
     flex: 0 0 16%;
@@ -86,7 +98,7 @@ body {
 
 aside h1 {
     font-size: 200%;
-    color: var(--color_navy);
+    color: var(--color_darkGrey);
 }
 
 .main-article p {
@@ -101,7 +113,7 @@ aside h1 {
 
 /* Items in work-container */
 .work-container section {
-    border: solid var(--color_cyan) 6px;
+    border: solid var(--color_slategrey) 6px;
 }
 
 #MERN-work {
@@ -144,13 +156,13 @@ aside h1 {
 }
 
 .work-container section h2 {
-    background-color: var(--color_cyan);
+    background-color: var(--color_slategrey);
     color:rgb(11, 22, 53);
     
 }
 
 .work-container section p {
-    background-color: var(--color_cyan);
+    background-color: var(--color_slategrey);
     color:rgb(11, 22, 53);
     padding:4px;
 }

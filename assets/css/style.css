@@ -8,10 +8,12 @@
     --color_darkGrey: #31343D;
     --color_aquamarine: #92CBCE;
     --color_slategrey: #445876;
+    --color_background: #eeeef7;
 }
 
 body {
     background-color: whitesmoke;
+    
 }
 
 /* Header Elements */
@@ -37,14 +39,15 @@ body {
     list-style-type: none;
     display: flex;
     justify-content: space-evenly;
-    width: 50vh;
+    width: 30em;
 }
 
 .header li {
     display: flex;
     margin: 0px;
     color: var(--color_aquamarine);
-    padding: 2vh 1vh 2vh 1vh;
+    min-width: 2vh;
+    padding: 2em 1em 2em 1em;
 }
 
 .header li:hover{
@@ -62,16 +65,40 @@ body {
     text-decoration: none;
     text-align: center;
     font-size: 130%;
-    font-weight:600;
+    font-weight: 600;
     position: relative;
-    padding: 1.5vh;
+
+    padding: 1.5vh 0.5vh 1.5vh 0.5vh;
     padding-bottom: 1vh;
+    flex-shrink: 0;
     border-bottom: var(--color_aquamarine) solid 3px;
 }
 
 .header a:hover {
     color:var(--color_darkGrey);
 }
+
+/** Area between header and main **/
+
+#headerBody_separator {
+    display: flex;
+    justify-content: flex-end;
+    align-content: end;
+    background-image: url("../images/fence1.jpg");
+    background-size: 110%;
+    background-repeat: no-repeat;
+    height: 350px;
+    margin-bottom: 20px;
+}
+
+#headerBody_separator h1{
+    margin: 240px 20px 40px 0;
+    padding: 20px;
+    font-size: 170%;
+    background-color: var(--color_aquamarine);
+}
+
+
 
 /** Main Elements 
     Specificty is Main>Article>section/aside
@@ -83,6 +110,7 @@ body {
     flex-flow: row;
     height: auto;
     width: 90%;
+    line-height: 150%;
 
     /* border: solid purple 4px; */
     padding: 20px;
@@ -93,6 +121,7 @@ body {
     border-right: solid var(--color_darkGrey) 4px;
     text-align: right;
     padding-right: 10px;
+    min-width: 50px;
     flex: 0 0 16%;
 }
 
@@ -113,13 +142,13 @@ aside h1 {
 
 /* Items in work-container */
 .work-container section {
-    border: solid var(--color_slategrey) 6px;
+    border: solid var(--color_aquamarine) 6px;
+    background-size: cover;
+    background-repeat:no-repeat;
 }
 
 #MERN-work {
     background-image: url(../images/mern.jpg);
-    background-size: cover;
-    background-repeat:no-repeat;
     flex-grow: 1;
     min-width: 550px;
     height: 280px;
@@ -128,8 +157,6 @@ aside h1 {
 
 #Unity-work {
     background-image: url('../images/galaga.png');
-    background-size: cover;
-    background-repeat:no-repeat;
     flex-grow: 1;
     min-width: 200px;
     height: 280px;
@@ -138,8 +165,7 @@ aside h1 {
 
 #Solar-work {
     background-image: url('../images/system.jpg');
-    background-size: cover;
-    background-repeat:no-repeat;
+
     flex-grow: 1;
     min-width: 500px;
     height: 280px;
@@ -152,17 +178,23 @@ aside h1 {
     margin-left: -2px;
     width: 200px;
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 200px;
 }
 
 .work-container section h2 {
-    background-color: var(--color_slategrey);
+    background-color: var(--color_aquamarine);
     color:rgb(11, 22, 53);
-    
+    font-size: 130%;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-left: 15px;
 }
 
 .work-container section p {
-    background-color: var(--color_slategrey);
+    background-color: var(--color_aquamarine);
     color:rgb(11, 22, 53);
     padding:4px;
+    font-size: 100%;
+    padding-left: 20px;
+    padding-bottom: 10px;
 }

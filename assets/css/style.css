@@ -13,7 +13,6 @@
 
 body {
     background-color: whitesmoke;
-    
 }
 
 /* Header Elements */
@@ -40,6 +39,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     width: 30em;
+    padding-right: 20px;
 }
 
 .header li {
@@ -78,31 +78,71 @@ body {
     color:var(--color_darkGrey);
 }
 
+@media screen and (max-width: 1059px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .header h1 {
+        text-align: center;
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .header ul {
+        flex-wrap: wrap;
+        max-width: 500px;
+
+    }
+
+    .header li {
+        padding-right: 5px;
+    }
+
+}
+
+
 /** Area between header and main **/
 
 #headerBody_separator {
     display: flex;
-    justify-content: flex-end;
-    align-content: end;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     background-image: url("../images/fence1.jpg");
     background-size: 110%;
     background-repeat: no-repeat;
-    height: 350px;
+    height: 260px;
     margin-bottom: 20px;
 }
 
 #headerBody_separator h1{
-    margin: 240px 20px 40px 0;
     padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    height: 25px;
     font-size: 170%;
     background-color: var(--color_aquamarine);
 }
 
+@media screen and (max-width: 1059px) {
+    #headerBody_separator{
+        justify-content: center;
+    }
 
+    #headerBody_separator h1 {
+        margin-left: 0;
+    }
+}
 
 /** Main Elements 
     Specificty is Main>Article>section/aside
 **/
+
+main {
+    justify-content: center;
+}
 
 /* Container for aside and articles */
 .main-article {
@@ -114,6 +154,8 @@ body {
     /* border: solid purple 4px; */
     padding: 20px;
 }
+
+
 
 /* Aside: flex item */
 .main-article aside {
@@ -134,10 +176,32 @@ aside h1 {
     width: 100%;
 }
 
+@media screen and (max-width: 1059px) {
+    .main-article {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .main-article aside {
+        border-bottom: solid var(--color_darkGrey) 4px;
+        border-right: none;
+        text-align: left;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        flex: 1 0 100%;
+    }
+
+    .main-article p {
+        padding-left: 0;
+    }
+
+}
+
 /* Nested container for work items*/
 .work-container {
     display: flex;
     flex-flow: row wrap;
+    flex-grow: 1;
     padding-left: 20px;
 }
 
@@ -152,40 +216,72 @@ aside h1 {
     background-image: url('../images/system.jpg');
     flex-grow: 1;
     min-width: 90%;
-    height: 280px;
+    height: 300px;
     margin: 5px;
+    transition: .3s;
+    filter: saturate(80%);
+}
+
+#Solar-work:hover {
+    filter: saturate(150%);
 }
 
 #Unity-work {
-    background-image: url('../images/galaga.png');
+    background-image: url('../images/invaders.jpg');
     flex-grow: 1;
-    min-width: 200px;
-    height: 280px;
+    min-width: 30%;
+    height: 300px;
     margin: 5px;
+    transition: .3s;
+    filter: saturate(80%);
 } 
+
+#Unity-work:hover {
+    filter: saturate(150%);
+}
 
 #MERN-work {
     background-image: url(../images/mern.jpg);
-    flex-grow: 1;
-    min-width: 550px;
-    height: 280px;
+    flex-grow: 2;
+    min-width: 50%;
+    height: 300px;
     margin: 5px;
+    transition: .3s;
+    filter: saturate(80%);
 }
 
+#MERN-work:hover {
+    filter: saturate(150%);
+}
 
+@media screen and (max-width: 1059px) {
+    .work-container {
+        padding-left: 0;
+    }
 
-
+    #Solar-work {
+        min-width: 100%;
+    }
+    #Unity-work {
+        min-width: 100%;
+    }
+    #MERN-work {
+        min-width: 100%;
+    }
+}
 
 /* Flex container for titles on top of content*/
 .work-container span {
+    display:inline-flex;
+    flex-direction: column;
+    align-content: flex-end;
     margin-left: -2px;
-    width: 200px;
-    display: inline-block;
     margin-top: 200px;
+    width: 200px;
+    background-color: var(--color_aquamarine);
 }
 
 .work-container section h2 {
-    background-color: var(--color_aquamarine);
     color:rgb(11, 22, 53);
     font-size: 130%;
     font-weight: 700;
@@ -198,8 +294,10 @@ aside h1 {
     color:rgb(11, 22, 53);
     padding:4px;
     font-size: 100%;
-    padding-left: 20px;
+    padding-left: 25px;
     padding-bottom: 10px;
+    width: 171px;
+    min-width: 171px;
 }
 
 /*Contact Section */
@@ -209,7 +307,7 @@ aside h1 {
 
 .contact-content ul {
     display:flex;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     flex: 1 0 100%;
 }
 
@@ -225,4 +323,11 @@ aside h1 {
     font-size: 110%;
     font-weight: bolder;
     color: var(--color_darkGrey);
+}
+
+@media screen and (max-width: 1059px) {
+    .contact-content ul {
+        justify-content:center;
+        flex-direction: column;
+    }
 }

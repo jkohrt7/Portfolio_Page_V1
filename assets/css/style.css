@@ -107,7 +107,6 @@ body {
 /* Container for aside and articles */
 .main-article {
     display: flex;
-    flex-flow: row;
     height: auto;
     width: 90%;
     line-height: 150%;
@@ -132,12 +131,14 @@ aside h1 {
 
 .main-article p {
     padding-left: 20px;
+    width: 100%;
 }
 
 /* Nested container for work items*/
 .work-container {
     display: flex;
     flex-flow: row wrap;
+    padding-left: 20px;
 }
 
 /* Items in work-container */
@@ -147,10 +148,10 @@ aside h1 {
     background-repeat:no-repeat;
 }
 
-#MERN-work {
-    background-image: url(../images/mern.jpg);
+#Solar-work {
+    background-image: url('../images/system.jpg');
     flex-grow: 1;
-    min-width: 550px;
+    min-width: 90%;
     height: 280px;
     margin: 5px;
 }
@@ -163,14 +164,16 @@ aside h1 {
     margin: 5px;
 } 
 
-#Solar-work {
-    background-image: url('../images/system.jpg');
-
+#MERN-work {
+    background-image: url(../images/mern.jpg);
     flex-grow: 1;
-    min-width: 500px;
+    min-width: 550px;
     height: 280px;
     margin: 5px;
 }
+
+
+
 
 
 /* Flex container for titles on top of content*/
@@ -197,4 +200,29 @@ aside h1 {
     font-size: 100%;
     padding-left: 20px;
     padding-bottom: 10px;
+}
+
+/*Contact Section */
+.contact-content {
+    width:100%;
+}
+
+.contact-content ul {
+    display:flex;
+    justify-content: space-evenly;
+    flex: 1 0 100%;
+}
+
+.contact-content li {
+    padding: 20px;
+    border-bottom: var(--color_aquamarine) 3px solid;
+    padding-bottom: 4px;
+    padding: 0 1px 4px 1px;
+}
+
+.contact-content a {
+    text-decoration: none;
+    font-size: 110%;
+    font-weight: bolder;
+    color: var(--color_darkGrey);
 }

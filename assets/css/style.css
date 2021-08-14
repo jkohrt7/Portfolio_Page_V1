@@ -83,6 +83,8 @@ body {
 @media screen and (max-width: 1059px) {
     .header {
         flex-direction: column;
+        margin-left: -5px;
+        margin-right: -5px;
     }
 
     .header h1 {
@@ -93,7 +95,7 @@ body {
 
     .header ul {
         flex-wrap: wrap;
-        max-width: 500px;
+        max-width: 300px;
 
     }
 
@@ -131,10 +133,14 @@ body {
 @media screen and (max-width: 1059px) {
     #headerBody_separator{
         justify-content: center;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     #headerBody_separator h1 {
         margin-left: 0;
+        margin-bottom: 80px;
+        height: 55px;
     }
 }
 
@@ -262,13 +268,13 @@ aside h1 {
     }
 
     #Solar-work {
-        min-width: 100%;
+        min-width: 95%;
     }
     #Unity-work {
-        min-width: 100%;
+        min-width: 95%;
     }
     #MERN-work {
-        min-width: 100%;
+        min-width: 95%;
     }
 }
 

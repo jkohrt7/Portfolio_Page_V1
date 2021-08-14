@@ -42,7 +42,6 @@ body {
     justify-content: space-evenly;
     width: 30em;
     margin-right: 20px
-
 }
 
 .header li {
@@ -52,10 +51,7 @@ body {
     min-width: 2vh;
     margin-bottom: 20px;
     padding: 0 0 6px 0;
-}
-
-.header a:hover {
-    background-color: var(--color_aquamarine);
+    transition: .1s;
 }
 
 .header a:hover li {
@@ -76,9 +72,11 @@ body {
     padding: 1.5em 1em .5em 1em;
     padding-bottom: 1vh;
     flex-shrink: 0;
+    transition: .1s;
 }
 
 .header a:hover {
+    background-color: var(--color_aquamarine);
     color:var(--color_darkGrey);
 }
 
@@ -318,6 +316,7 @@ aside h1 {
     border: var(--color_aquamarine) solid 2px; 
     max-width: 10%;
     margin-left: 15px;
+    margin-right: 5px;
 }
 
 .contact-content ul {

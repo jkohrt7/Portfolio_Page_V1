@@ -2,14 +2,14 @@
 
 ## Description  
 
-A personal portfolio page written in CSS and HTML (plus two on-click JS functions to open projects in separate tabs). This landing page includes links to some of my existing web-related projects; currently, two of the three projects are placeholders, but the solar system project is in a functional state. To learn more about that particular project, you can click [here](). The page also includes several ways to contact me and a link to my resume.
+A personal portfolio page written in CSS and HTML (plus two on-click JS functions to open projects in separate tabs). This landing page includes links to some of my existing web-related projects; currently, two of the three projects are placeholders, but the solar system project is in a functional state. To learn more about that particular project, you can click [here](https://github.com/jkohrt7/THREE.js_Solar-System). The page also includes several ways to contact me and a link to my resume.
 
 
 ## Installation and Usage 
 The webpage is hosted with Github Pages and can be found here: https://jkohrt7.github.io/Portfolio_Page_V1/
 
 
-This webpage runs on all modern browsers and requires no additional installations or notable hardware requirements. In the "Work" subsection of the webpage, there are several of my projects, each of which have slightly different requirements (and much different usage instructions). Currently, the Shmup and MERN stack projects are not linked (they are in development) but clicking the solar system project will open it in a new tab. You can visit the repository for that project [here](). LINKKKK  
+This webpage runs on all modern browsers and requires no additional installations or notable hardware requirements. In the "Work" subsection of the webpage, there are several of my projects, each of which have slightly different requirements (and much different usage instructions). Currently, the Shmup and MERN stack projects are not linked (they are in development and will open an empty webpage) but clicking the solar system project will open it in a new tab. As mentioned earlier, you can visit the repository for that project [here](https://github.com/jkohrt7/THREE.js_Solar-System).   
 
 
 ![screenshot](assets/images/screenshot.png)
